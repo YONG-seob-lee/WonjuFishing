@@ -190,6 +190,106 @@ footer p {
   margin: 4px 0;
 }
 
+.map-toggle-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #131313;
+  background: #e9e4e4;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(228, 227, 227, 0.2);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.map-toggle-btn:hover {
+  background: #555;
+  color:#f1f1f1;
+  transform: scale(1.05);
+}
+
+/* 모달 배경 */
+.modal {
+  display: none; /* 기본은 숨김 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal h2 {
+  color:#e9e4e4;
+}
+/* 모달 내용 */
+.modal-content {
+  background-color: #181818;
+  margin: 10% auto;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* 닫기 버튼 */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.map-container .map-image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* 공통 사진 스타일 */
+.photo-thumb {
+  position: absolute;
+  width: 60px;
+  border-radius: 8px;
+  border: 2px solid white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, z-index 0.3s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.photo-thumb:hover {
+  transform: scale(2.2);
+  z-index: 10;
+}
+
+/* 위치 개별 지정 (비율로 조정) */
+.thumb1 { top: 35%; left: 34%; }
+.thumb2 { top: 62%; left: 53%; }
+.thumb3 { top: 42%; left: 70%; }
+.thumb4 { top: 22%; left: 56%; }
+
 /* ========== 반응형 ========== */
 @media (max-width: 768px) {
   header h1 {

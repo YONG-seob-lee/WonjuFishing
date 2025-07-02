@@ -27,6 +27,7 @@
         <div class="about-text">
           <p><strong>원주 중고 낚시</strong>는 경험과 실소를 중시하는 낚시인의 선택입니다 🎯</p>
           <p><strong>연락처 :</strong> 010 - 8783 - 2415</p>
+          <p><strong>주소 :</strong> 강원도 원주시 남산로 180 대성빌딩 1층</p>
           <p><strong>메일 :</strong> dlqudrnjs2415@gmail.com</p>
         </div>
         <img class="about-img" src="assets/images/FishLogo.png" alt="낚시 이미지" />
@@ -35,10 +36,25 @@
 
     <section id="map">
       <h2>🚩 오시는 길</h2>
-      <p>🚗 <strong>전체 약도</strong></p>
-      <img src="assets/images/Map_entire.png" alt="전체 약도" class="map-image" />
       <p>🅿️ <strong>상세 주차 및 진입 약도</strong></p>
-      <img src="assets/images/Map_detail.png" alt="상세 도" class="map-image" />
+      <div class="map-container">
+        <img src="assets/images/Map_detail.png" alt="상세 도" class="map-image" />
+
+        <img src="assets/images/Location_01.jpg" class="photo-thumb thumb1" alt="포토1" />
+        <img src="assets/images/Location_02.jpg" class="photo-thumb thumb2" alt="포토2" />
+        <img src="assets/images/Location_03.jpg" class="photo-thumb thumb3" alt="포토3" />
+        <img src="assets/images/Location_04.jpg" class="photo-thumb thumb4" alt="포토4" />
+
+        <button id="map-toggle-btn" class="map-toggle-btn">전체 약도</button>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModalBtn" class="close">&times;</span>
+          <h2>전체 약도</h2>
+          <img src="assets/images/Map_entire.png" alt="전체 약도" />
+        </div>
+      </div>
     </section>
 
     <section id="pagelink">
@@ -56,19 +72,19 @@
     </section>
 
     <section id="youtube">
-      <h2>📽 찾아오는 방법 영상</h2>
+      <h2>📽 영상</h2>
       <div class="wrapper">
         <div class="card-box">
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/tvLHerqk7lg?si=qGKRCftPPQq4KFMX" frameborder="0" allowfullscreen></iframe>
           </div>
-          <p>찾아오는 방법</p>
+          <p>추천 영상 1</p>
         </div>
         <div class="card-box">
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/tvLHerqk7lg?si=qGKRCftPPQq4KFMX" frameborder="0" allowfullscreen></iframe>
           </div>
-          <p>추천 영상</p>
+          <p>추천 영상 2</p>
         </div>
       </div>
     </section>
@@ -87,6 +103,26 @@
         <div class="card-box">
           <img src="assets/images/Store_03.jpg" alt="매장 내부 3" />
           <p>🎒 매장 내부 3</p>
+        </div>
+        <div class="card-box">
+          <img src="assets/images/Store_04.jpg" alt="매장 내부 4" />
+          <p>🎰 매장 내부 4</p>
+        </div>
+        <div class="card-box">
+          <img src="assets/images/Store_05.jpg" alt="매장 내부 5" />
+          <p>🕹️ 매장 내부 5</p>
+        </div>
+        <div class="card-box">
+          <img src="assets/images/Store_06.jpg" alt="매장 내부 6" />
+          <p>🎍 매장 내부 6</p>
+        </div>
+        <div class="card-box">
+          <img src="assets/images/Store_07.jpg" alt="매장 내부 7" />
+          <p>🏑 매장 내부 7</p>
+        </div>
+        <div class="card-box">
+          <img src="assets/images/Store_08.jpg" alt="매장 내부 8" />
+          <p>🎱 매장 내부 8</p>
         </div>
       </div>
     </section>
@@ -112,3 +148,27 @@
   </footer>
 </body>
 </html>
+
+<script>
+  // 1. 요소 선택
+  const modal = document.getElementById('myModal');              // 모달 전체
+  const openBtn = document.getElementById('map-toggle-btn');      // 여는 버튼
+  const closeBtn = document.getElementById('closeModalBtn');    // 닫는 버튼 (X)
+
+  // 2. 버튼 클릭 시 모달 보이기
+  openBtn.onclick = () => {
+    modal.style.display = 'block';
+  };
+
+  // 3. X 버튼 클릭 시 모달 숨기기
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  // 4. 배경 클릭 시 모달 닫기
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+</script>
