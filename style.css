@@ -313,6 +313,10 @@ footer p {
   .card {
     width: 100%;
   }
+
+  .photo-thumb{
+    width: 40px;
+  }
 }
 
 @media (max-width: 480px) {
