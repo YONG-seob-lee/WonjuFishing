@@ -316,6 +316,11 @@ footer p {
 
   .photo-thumb{
     width: 40px;
+    transition: transform 0.2s ease;
+  }
+  .photo-thumb:hover{
+    transform: sacle(2.0);
+    z-index: 10;
   }
 }
 
